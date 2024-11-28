@@ -18,5 +18,6 @@ jobs:
 
       - name: "Run Script"
         run: |
+          echo "${{ secrets.API_KEY }}"
           bash ./start.sh "${{ github.event.inputs.miasto }}" "${{ secrets.API_KEY }}" >> $GITHUB_STEP_SUMMARY
 
